@@ -149,12 +149,6 @@ cd generator
 python main_v2.py --help
 ```
 
-## Roadmap
-
-- [x] Core tool-integrated inference pipeline release
-- [x] Anonymized project packaging for public sharing
-- [ ] Full training/evaluation scripts cleanup for one-command reproduction
-- [ ] Public benchmark result cards and checkpoints (if policy permits)
 
 ## License
 
