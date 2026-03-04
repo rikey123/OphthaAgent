@@ -32,11 +32,11 @@ This repository is an anonymized and cleaned **partial open-source release**, fo
 - [System Overview](#system-overview)
 - [Method at a Glance](#method-at-a-glance)
 - [Results Snapshot](#results-snapshot)
+- [Datasets](#datasets)
 - [Open-Source Scope](#open-source-scope)
 - [Repository Layout](#repository-layout)
 - [Quick Start](#quick-start)
 - [Roadmap](#roadmap)
-- [Citation](#citation)
 - [License](#license)
 
 ## System Overview
@@ -89,6 +89,21 @@ On two fundus benchmarks, OphthaAgent shows consistent improvements over strong 
 
 For full protocols, ablations, and detailed comparisons, please refer to the paper.
 
+## Datasets
+
+The project is trained/evaluated with multiple public ophthalmic datasets. Please follow each dataset's official license and usage policy.
+
+- ADAM: [https://amd.grand-challenge.org/](https://amd.grand-challenge.org/)
+- AGAR300: [https://doi.org/10.21227/fsnq-tn19](https://doi.org/10.21227/fsnq-tn19)
+- Drishti: [http://cvit.iiit.ac.in/projects/mip/drishti-gs/mip-dataset2/Home.php](http://cvit.iiit.ac.in/projects/mip/drishti-gs/mip-dataset2/Home.php)
+- ORIGA: [https://pubmed.ncbi.nlm.nih.gov/21095735/](https://pubmed.ncbi.nlm.nih.gov/21095735/)
+- PARAGUAY: [https://zenodo.org/records/4532361](https://zenodo.org/records/4532361)
+- FUND-OCT: [https://data.mendeley.com/datasets/2rnnz5nz74/2](https://data.mendeley.com/datasets/2rnnz5nz74/2)
+- CHAKSU: [https://figshare.com/articles/dataset/Ch_k_u_A_glaucoma_specific_fundus_image_database/20123135](https://figshare.com/articles/dataset/Ch_k_u_A_glaucoma_specific_fundus_image_database/20123135)
+- ARIA: [http://www.eyecharity.com/aria_online](http://www.eyecharity.com/aria_online)
+- OIA-DDR: [https://github.com/nkicsl/DDR-dataset](https://github.com/nkicsl/DDR-dataset)
+- IDRiD (DME): [https://idrid.grand-challenge.org/](https://idrid.grand-challenge.org/)
+
 ## Open-Source Scope
 
 This release currently includes:
@@ -140,19 +155,6 @@ python main_v2.py --help
 - [x] Anonymized project packaging for public sharing
 - [ ] Full training/evaluation scripts cleanup for one-command reproduction
 - [ ] Public benchmark result cards and checkpoints (if policy permits)
-
-## Citation
-
-If you find this project useful, please cite:
-
-```bibtex
-@article{ophthaagent,
-  title   = {OphthaAgent: Tool-Augmented Agentic Reasoning for Fundus Diagnosis},
-  author  = {Anonymous},
-  journal = {Under review},
-  year    = {2026}
-}
-```
 
 ## License
 
