@@ -108,7 +108,7 @@ The project is trained/evaluated with multiple public ophthalmic datasets. Pleas
 
 This release currently includes:
 
-- `ophthaagent-toolkit/`: core pipeline, tool integration, and execution scripts
+- `ophthaagent-toolkit/`: core pipeline, tool integration, execution scripts and data generation pipleline
 - `assets/system_overview.png`: project figure
 
 Large private assets/checkpoints and non-public components are intentionally excluded.
