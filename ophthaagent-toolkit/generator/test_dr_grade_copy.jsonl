@@ -1,0 +1,19 @@
+// {"id": 2405, "image": "15_APTOS/train_images/a8263d248523.png", "conversations": [{"from": "human", "value": "What does the image show?\nA: Mild diabetic retinopathy\nB: Vitreous degeneration\nC: Healthy\nD: Hypertensive retinopathy"}, {"from": "gpt", "value": "C"}], "modality": "CFP"}
+// {"id": 2245, "image": "15_APTOS/train_images/9e2058917304.png", "conversations": [{"from": "human", "value": "What is the main focus of this medical image?\nA: Proliferative diabetic retinopathy\nB: Hypertensive retinopathy\nC: Mild diabetic retinopathy\nD: Healthy"}, {"from": "gpt", "value": "D"}], "modality": "CFP"}
+# MA
+// {"id": 187, "image": "20_E-ophta/e_optha_MA/MA/E0020386/C0014790.jpg", "conversations": [{"from": "human", "value": "What abnormalities are present in this image?\nA: microaneurysms\nB: neovascularisation\nC: Healthy\nD: red small dots"}, {"from": "gpt", "value": "A"}], "modality": "CFP"}
+// // # EX
+// {"id": 34, "image": "20_E-ophta/e_optha_EX/EX/E0000404/C0021836.jpg", "conversations": [{"from": "human", "value": "What is being shown in the image?\nA: tractional retinal detachment\nB: exudates\nC: microaneurysms\nD: neovascularisation"}, {"from": "gpt", "value": "B"}], "modality": "CFP"}
+// #AMD
+// {"id": 2109, "image": "04_RFMiD/1. Original Images/b. Validation Set/190.png", "conversations": [{"from": "human", "value": "What abnormalities are present in this image?\nA: diabetic retinopathy\nB: healthy\nC: age-related macular degeneration\nD: laser scar\nE: optic disc cupping\nF: media haze"}, {"from": "gpt", "value": "C"}], "modality": "CFP"}
+// # Glaucoma
+// {"id": 172, "image": "36_ACRIMA/G/Im665_g_ACRIMA.jpg", "conversations": [{"from": "human", "value": "What does the image depict?\nA: Chorioretinitis\nB: Glaucoma\nC: Cataract\nD: Healthy"}, {"from": "gpt", "value": "B"}], "modality": "CFP"}
+// # DME
+// {"id": 719, "image": "02_Messidor-2/IMAGES/20060411_60263_0200_PP.png", "conversations": [{"from": "human", "value": "What is being shown in the image?\nA: diabetic macular edema\nB: Healthy\nC: Moderate diabetic retinopathy\nD: Cataract"}, {"from": "gpt", "value": "A,C"}], "modality": "CFP"}
+#DR 
+{"id": 87, "image": "15_APTOS/train_images/070f67572d03.png", "conversations": [{"from": "human", "value": "What is the main focus of this medical image?\nA: Pathologic myopia\nB: Severe diabetic retinopathy\nC: Central serous retinopathy\nD: Cataract"}, {"from": "gpt", "value": "B"}], "modality": "CFP"}
+// {"id": 785, "image": "15_APTOS/train_images/38487e1a5b1f.png", "conversations": [{"from": "human", "value": "What is the focus of the image?\nA: Pathologic myopia\nB: Moderate diabetic retinopathy\nC: Retinal detachment\nD: Central serous retinopathy"}, {"from": "gpt", "value": "B"}], "modality": "CFP"}
+// // # PDR- n
+// {"id": 34, "image": "20_E-ophta/e_optha_EX/EX/E0000404/C0021836.jpg", "conversations": [{"from": "human", "value": "What is being shown in the image?\nA: tractional retinal detachment\nB: Proliferative diabetic retinopathy\nC: microaneurysms\nD: neovascularisation"}, {"from": "gpt", "value": "B,D"}], "modality": "CFP"}
+// # DR + AMD
+// {"id": 3109, "image": "15_APTOS/train_images/d85588ff2ebd.png", "conversations": [{"from": "human", "value": "What abnormalities are present in this image?\nA: Mild diabetic retinopathy\nB: Proliferative diabetic retinopathy\nC: drusen\nD: Moderate diabetic retinopathy"}, {"from": "gpt", "value": "A,C"}], "modality": "CFP"}

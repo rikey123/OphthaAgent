@@ -1,0 +1,23 @@
+[
+  {
+    "question": "诊断这张眼底图像中糖尿病视网膜病变的严重程度。",
+    "image_path": "data/test/001.jpg",
+    "answer": "患者被诊断为中度非增殖性糖尿病视网膜病变。"
+  },
+  {
+    "question": "根据杯盘比，是否有青光眼性视神经病变的迹象？",
+    "image_path": "data/test/002.jpg",
+    "answer": "是的，图像显示垂直杯盘比增大，提示青光眼。"
+  },
+  {
+    "question": "患者是否显示晚期AMD或大玻璃膜疣的迹象？",
+    "image_path": "data/test/003.jpg",
+    "answer": "患者存在大玻璃膜疣，但没有晚期AMD的迹象。"
+  },
+  {
+    "question": "眼底中微动脉瘤的数量是多少？",
+    "image_path": "data/test/004.jpg",
+    "answer": "检测到大约12个微动脉瘤。"
+  }
+]
+

@@ -1,0 +1,18 @@
+# CoT生成器 V2 依赖包
+
+# 核心依赖
+openai>=1.0.0
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+tqdm>=4.65.0
+
+# 数据处理
+numpy>=1.24.0
+
+# SSH远程图片获取（密码认证支持）
+paramiko>=3.0.0
+
+# 可选：超分辨率（如需启用）
+# opencv-python>=4.8.0
+# basicsr>=1.4.2
+# realesrgan>=0.3.0

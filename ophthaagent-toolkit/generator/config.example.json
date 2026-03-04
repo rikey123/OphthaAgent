@@ -1,0 +1,22 @@
+{
+  "api_config": {
+    "openai": {
+      "api_key": "your-openai-api-key-here",
+      "base_url": "https://api.openai.com/v1"
+    },
+    "anthropic": {
+      "api_key": "your-anthropic-api-key-here"
+    },
+    "qwen": {
+      "api_key": "your-dashscope-api-key-here",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    }
+  },
+  "generator_config": {
+    "max_workers": 5,
+    "retry_times": 3,
+    "retry_delay": 1.0,
+    "save_interval": 10
+  }
+}
+

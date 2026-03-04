@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-08T15:51:09.463240",
+    "analyzer": "AutoMorphalyzer",
+    "version": "2025"
+  },
+  "images": [
+    {
+      "filename": "e7b5dd5bab1f.png",
+      "quality": {
+        "quickqual_score": 0.1691163033246994
+      },
+      "optic_disc": {
+        "laterality": "Right",
+        "macular_centred": true,
+        "disc_height_px": 137,
+        "disc_width_px": 139,
+        "cup_height_px": 58,
+        "cup_width_px": 65,
+        "cdr_vertical": 0.4233576642335766,
+        "cdr_horizontal": 0.4676258992805755
+      },
+      "vessel_features": {
+        "binary": {
+          "whole": {
+            "vessel_density": 0.0709797726223453,
+            "fractal_dimension": 1.4540424830447545,
+            "average_global_calibre": 6.259887604707878,
+            "average_local_calibre": 6.106619926226319,
+            "tortuosity_distance": 1.0812440977891642,
+            "tortuosity_density": 0.589698173499458
+          },
+          "B": {
+            "average_local_calibre": 7.0834442727764255,
+            "tortuosity_distance": 1.0643631984396416,
+            "tortuosity_density": 0.6135107758352701
+          },
+          "C": {
+            "average_local_calibre": 7.100167119307396,
+            "tortuosity_distance": 1.0736547374176435,
+            "tortuosity_density": 0.6311439710151794
+          }
+        },
+        "artery": {
+          "whole": {
+            "vessel_density": 0.0366555093875038,
+            "fractal_dimension": 1.3075949855992708,
+            "average_global_calibre": 5.84173213259245,
+            "average_local_calibre": 5.742140945907939,
+            "tortuosity_distance": 1.0775670108127626,
+            "tortuosity_density": 0.5802548705080036
+          },
+          "B": {
+            "average_local_calibre": 6.362119301425024,
+            "tortuosity_distance": 1.0610571341088495,
+            "tortuosity_density": 0.6143403828417803
+          },
+          "C": {
+            "average_local_calibre": 6.626483918241074,
+            "tortuosity_distance": 1.067152948312312,
+            "tortuosity_density": 0.6250071000342494
+          }
+        },
+        "vein": {
+          "whole": {
+            "vessel_density": 0.0295078774238227,
+            "fractal_dimension": 1.232209270752612,
+            "average_global_calibre": 6.998289136013687,
+            "average_local_calibre": 6.273789378123936,
+            "tortuosity_distance": 1.0795951060038107,
+            "tortuosity_density": 0.6861363293067163
+          },
+          "B": {
+            "average_local_calibre": 6.96475778809065,
+            "tortuosity_distance": 1.0600443028475912,
+            "tortuosity_density": 0.5501254648891888
+          },
+          "C": {
+            "average_local_calibre": 7.332769425177855,
+            "tortuosity_distance": 1.0731569695922134,
+            "tortuosity_density": 0.6186481265171057
+          }
+        }
+      },
+      "large_vessel_metrics": {
+        "CRAE_artery_B": 13.173663329518613,
+        "CRAE_artery_C": 14.37510030630566,
+        "CRVE_vein_B": 20.39119129222485,
+        "CRVE_vein_C": 26.1864707210375,
+        "AVR_B": 0.6460467728799015,
+        "AVR_C": 0.5489514207333444
+      },
+      "vessel_mask_path": "<ANON_ABS_PATH>",
+      "disc_mask_path": "<ANON_ABS_PATH>"
+    }
+  ]
+}

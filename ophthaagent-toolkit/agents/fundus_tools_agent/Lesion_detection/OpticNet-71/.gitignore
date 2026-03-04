@@ -1,0 +1,11 @@
+*.ipynb
+*.h5
+*.hdf5
+*.sh
+optic-net-log-rand/
+optic-net-log/
+*.jpeg
+*.tiff
+*.tif
+metrics-jup.py
+metrics-jup-small-dataset-.py
