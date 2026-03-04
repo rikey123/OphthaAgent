@@ -66,6 +66,19 @@ OphthaAgent integrates 11 vision tools across three granularities:
 
 Additional quality assessment/enhancement and ROI cropping improve robustness on low-quality inputs.
 
+| Category | Task | Detailed Outputs |
+| --- | --- | --- |
+| Quality Assessment | Fundus quality prediction | `quality_class` (e.g., good/poor) + `quality_score` (0–1) |
+| Image Enhancement | Brighten / Darken / Sharpen | `enhanced_fundus_image_path` |
+| DR Grading | DR grading (DINO) | **5-class DR grading**: `Healthy (No_DR)`, `Mild_NPDR`, `Moderate_NPDR`, `Severe_NPDR`, `PDR`; `confidence` (and optionally `logits/probs[5]`) |
+| Lesion Segmentation | Lesion segmentation (nnU-Net) | 4 typical DR lesion masks: `EX/HE/MA/SE` (binary mask); supports **upscaled inference** (higher input resolution via resize/tiling) for finer lesion boundaries; plus lesion statistics per class (e.g., `count`, `area_pixels/area_ratio`) |
+| DME Risk | DME risk assessment | `"anatomical_features": { "fovea_coordinates", "optic_disc_coordinates", "optic_disc_diameter_pixels" }`; `"hard_exudates": { "count", "min_distance_to_fovea_pixels", "dme_risk_assessment", "visualization_path" }` |
+| ETDRS Mapping | ETDRS-anchor mapping | Projects lesion masks + anatomical segmentations (OD/OC/vessels, etc.) back onto the fundus image; outputs ETDRS-based distribution and `visualization_image_path` |
+| Anatomy Segmentation | OD/OC, vessels, A/V, CDR/AVR/tortuosity, etc. | `od_mask`, `oc_mask`, `vessel_mask`, `av_map`; quantitative results in `metrics.json` (e.g., `CDR`, `AVR/CRAE/CRVE`, `tortuosity`, fractal dimension) |
+| Anatomic Localization | optic disc / fovea localization | `disc_xy` and `fovea_xy` coordinates |
+| AMD Recognition | AMD Grade + Lesion | AMD grading; key abnormalities: `drusen_size`, `pigmentary_abnormalities`, `late_AMD`, `GA`, `central_GA` |
+| CROP | CROP region of interest (ROI) | cropped ROI image (`cropped_fundus`) + super-resolved ROI (`sr_cropped_fundus`) |
+
 ### 2) Two-Stage Training
 
 - **Stage 1: Cold-start SFT**
@@ -103,21 +116,6 @@ The project is trained/evaluated with multiple public ophthalmic datasets. Pleas
 - ARIA: [http://www.eyecharity.com/aria_online](http://www.eyecharity.com/aria_online)
 - OIA-DDR: [https://github.com/nkicsl/DDR-dataset](https://github.com/nkicsl/DDR-dataset)
 - IDRiD (DME): [https://idrid.grand-challenge.org/](https://idrid.grand-challenge.org/)
-
-## Fundus Toolkit
-
-| Category | Task | Detailed Outputs |
-| --- | --- | --- |
-| Quality Assessment | Fundus quality prediction | `quality_class` (e.g., good/poor) + `quality_score` (0–1) |
-| Image Enhancement | Brighten / Darken / Sharpen | `enhanced_fundus_image_path` |
-| DR Grading | DR grading (DINO) | **5-class DR grading**: `Healthy (No_DR)`, `Mild_NPDR`, `Moderate_NPDR`, `Severe_NPDR`, `PDR`; `confidence` (and optionally `logits/probs[5]`) |
-| Lesion Segmentation | Lesion segmentation (nnU-Net) | 4 typical DR lesion masks: `EX/HE/MA/SE` (binary mask); supports **upscaled inference** (higher input resolution via resize/tiling) for finer lesion boundaries; plus lesion statistics per class (e.g., `count`, `area_pixels/area_ratio`) |
-| DME Risk | DME risk assessment | `"anatomical_features": { "fovea_coordinates", "optic_disc_coordinates", "optic_disc_diameter_pixels" }`; `"hard_exudates": { "count", "min_distance_to_fovea_pixels", "dme_risk_assessment", "visualization_path" }` |
-| ETDRS Mapping | ETDRS-anchor mapping | Projects lesion masks + anatomical segmentations (OD/OC/vessels, etc.) back onto the fundus image; outputs ETDRS-based distribution and `visualization_image_path` |
-| Anatomy Segmentation | OD/OC, vessels, A/V, CDR/AVR/tortuosity, etc. | `od_mask`, `oc_mask`, `vessel_mask`, `av_map`; quantitative results in `metrics.json` (e.g., `CDR`, `AVR/CRAE/CRVE`, `tortuosity`, fractal dimension) |
-| Anatomic Localization | optic disc / fovea localization | `disc_xy` and `fovea_xy` coordinates |
-| AMD Recognition | AMD Grade + Lesion | AMD grading; key abnormalities: `drusen_size`, `pigmentary_abnormalities`, `late_AMD`, `GA`, `central_GA` |
-| CROP | CROP region of interest (ROI) | cropped ROI image (`cropped_fundus`) + super-resolved ROI (`sr_cropped_fundus`) |
 
 ## Open-Source Scope
 
