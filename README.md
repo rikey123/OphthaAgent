@@ -68,22 +68,22 @@ Additional quality assessment/enhancement and ROI cropping improve robustness on
 
 | Category | Task | Model | Input → Output | Training Data | GitHub |
 | --- | --- | --- | --- | --- | --- |
-| Quality Assessment | Fundus quality prediction | 10-model ResNet/EfficientNet ensemble | Fundus image → quality label + score | DeepDRiD, DrimDB | [Fundus Image Toolbox](https://github.com/berenslab/fundus_image_toolbox) |
-| Image Enhancement | Brighten / Darken / Sharpen | Deterministic image enhancement | Fundus image → enhanced image | N/A | [IETK-Ret](https://github.com/adgaudio/ietk-ret) |
-| DR Grading | DR grading | DINOv2 | Fundus image → DR grade + confidence | EyePACS, APTOS 2019, Messidor | Ours |
+| Quality Assessment | Fundus quality prediction | EfficientNet ensemble | Fundus image → quality label + score | DeepDRiD, DrimDB | [Fundus Image Toolbox](https://github.com/berenslab/fundus_image_toolbox) |
+| Image Enhancement | Brighten / Darken / Sharpen | Image enhancement | Fundus image → enhanced image | N/A | [IETK-Ret](https://github.com/adgaudio/ietk-ret) |
+| DR Grading | DR grading | DINOv2 | Fundus image → DR grade + confidence | EyePACS, APTOS | Ours |
 | Lesion Segmentation | Lesion segmentation | nnU-Net | Fundus image → lesion masks + statistics | IDRiD | Ours |
 | DME Risk | DME risk assessment | Rule-based evidence integration | Lesion/anatomy evidence → DME risk | N/A | Ours |
 | ETDRS Mapping | ETDRS-anchor mapping | Deterministic geometric mapping | Image + masks → ETDRS lesion distribution | N/A | Ours |
-| Anatomy Segmentation | OD/OC, vessels, A/V, CDR/AVR/tortuosity | AutoMorph / BF-Net / LWNet | Fundus image → anatomy masks + morphology metrics | DRIVE, STARE, CHASEDB1, HRF, IOSTAR, LES-AV, DRIVE-AV, HRF-AV, REFUGE, GAMMA | [AutoMorphalyzer](https://github.com/jaburke166/AutoMorphalyzer) |
+| Anatomy Segmentation | OD/OC, vessels, A/V, CDR/AVR/tortuosity | AutoMorph | Fundus image → anatomy masks + morphology metrics | DRIVE, STARE, CHASEDB1, HRF, IOSTAR, LES-AV, DRIVE-AV, HRF-AV, REFUGE, GAMMA | [AutoMorphalyzer](https://github.com/jaburke166/AutoMorphalyzer) |
 | Anatomic Localization | Optic disc / fovea localization | Multi-task EfficientNet | Fundus image → fovea/OD coordinates | ADAM, REFUGE, IDRiD | [Fundus Image Toolbox](https://github.com/berenslab/fundus_image_toolbox) |
 | AMD Recognition | AMD grading + lesion analysis | DeepSeeNet+ | Fundus image → AMD grade + abnormalities | AREDS, AREDS2 | [DeepSeeNet+](https://github.com/ncbi-nlp/deepseenet-plus) |
 | CROP | Crop region of interest (ROI) | Deterministic cropping / interpolation | Image + ROI → cropped image | N/A | Ours |
 
-## Trajectory Filtering
+### 2) Trajectory Filtering
 
 To ensure the quality and diversity of the synthesized CoT trajectories, we apply a **quality-based validation** filtering strategy. 
 
-### 1. Quality-based Filtering
+#### Quality-based Filtering
 
 Each trajectory is evaluated using a 100-point rubric covering four aspects:
 
@@ -102,14 +102,14 @@ Trajectories are filtered according to the following rules:
 - **Valid tool-error corrections:** retained
 - **Malformed or logically inconsistent trajectories:** discarded
 
-### 2) Two-Stage Training
+### 3) Two-Stage Training
 
 - **Stage 1: Cold-start SFT**
   - Learn multi-turn tool use boundaries and recovery behavior from clinically aligned trajectories
 - **Stage 2: Agentic RL (GRPO)**
   - Optimize policy with trajectory rewards and KL regularization under real-time tool execution
 
-### 3) Composite Reward
+### 4) Composite Reward
 
 - `R_format`: output structure compliance
 - `R_acc`: prediction-ground-truth consistency
@@ -127,7 +127,7 @@ For full protocols, ablations, and detailed comparisons, please refer to the pap
 
 ## Datasets
 
-The project is trained/evaluated with multiple public ophthalmic datasets. Please follow each dataset's official license and usage policy.
+The project is trained with multiple public ophthalmic datasets. Please follow each dataset's official license and usage policy.
 
 - ADAM: [https://amd.grand-challenge.org/](https://amd.grand-challenge.org/)
 - AGAR300: [https://doi.org/10.21227/fsnq-tn19](https://doi.org/10.21227/fsnq-tn19)
@@ -138,7 +138,7 @@ The project is trained/evaluated with multiple public ophthalmic datasets. Pleas
 - CHAKSU: [https://figshare.com/articles/dataset/Ch_k_u_A_glaucoma_specific_fundus_image_database/20123135](https://figshare.com/articles/dataset/Ch_k_u_A_glaucoma_specific_fundus_image_database/20123135)
 - ARIA: [http://www.eyecharity.com/aria_online](http://www.eyecharity.com/aria_online)
 - OIA-DDR: [https://github.com/nkicsl/DDR-dataset](https://github.com/nkicsl/DDR-dataset)
-- IDRiD (DME): [https://idrid.grand-challenge.org/](https://idrid.grand-challenge.org/)
+- IDRiD: [https://idrid.grand-challenge.org/](https://idrid.grand-challenge.org/)
 
 ## Open-Source Scope
 
