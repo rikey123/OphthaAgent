@@ -78,6 +78,30 @@ Additional quality assessment/enhancement and ROI cropping improve robustness on
 | Anatomic Localization | Optic disc / fovea localization | Multi-task EfficientNet | Fundus image → fovea/OD coordinates | ADAM, REFUGE, IDRiD | [Fundus Image Toolbox](https://github.com/berenslab/fundus_image_toolbox) |
 | AMD Recognition | AMD grading + lesion analysis | DeepSeeNet+ | Fundus image → AMD grade + abnormalities | AREDS, AREDS2 | [DeepSeeNet+](https://github.com/ncbi-nlp/deepseenet-plus) |
 | CROP | Crop region of interest (ROI) | Deterministic cropping / interpolation | Image + ROI → cropped image | N/A | Ours |
+
+## Trajectory Filtering
+
+To ensure the quality and diversity of the synthesized CoT trajectories, we apply a **quality-based validation** filtering strategy. 
+
+### 1. Quality-based Filtering
+
+Each trajectory is evaluated using a 100-point rubric covering four aspects:
+
+| Criterion | Score | Description |
+| --- | ---: | --- |
+| Format & Structure | 10 | Valid `<think>`, `<tool_call>`, `<observation>`, and `<answer>` structure |
+| Clinical Logic | 30 | Clinically coherent reasoning, hypothesis formulation, and diagnostic progression |
+| Tool Interaction | 40 | Faithful interpretation of actual tool outputs and appropriate handling of tool errors |
+| Answer Consistency | 20 | Consistency between the reasoning trajectory and final diagnosis |
+
+Trajectories are filtered according to the following rules:
+
+- **Minimum quality score:** 50
+- **Fatal errors:** discarded
+- **Hallucinated tool evidence:** discarded
+- **Valid tool-error corrections:** retained
+- **Malformed or logically inconsistent trajectories:** discarded
+
 ### 2) Two-Stage Training
 
 - **Stage 1: Cold-start SFT**
