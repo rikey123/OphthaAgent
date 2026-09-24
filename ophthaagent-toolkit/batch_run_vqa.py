@@ -19,11 +19,6 @@ configurations = [
         "dataset_name": "GlAUCOMA_ACRIMA"
     },
     # {
-    #     "vqa_file": os.path.join(base_path, 'benchmark/filtered_DR_lession/filtered_by_id_OIA-DDR.json'),
-    #     "agent_file_path": os.path.join(base_path, 'fundus_decision2_parallel_v12_02.py'),
-    #     "dataset_name": "DR_lession_OIA-DDR"
-    # },
-    # {
     #     "vqa_file": os.path.join(base_path, 'benchmark/filtered_DR_E-ophta/filtered_by_id_E-ophta.json'),
     #     "agent_file_path": os.path.join(base_path, 'fundus_decision2_v11_18_dr.py'),
     #     "dataset_name": "DR_E-ophta"
