@@ -143,7 +143,7 @@ class SSHImageFetcher:
         获取图片的本地路径，如果不存在则从SSH下载
 
         Args:
-            relative_path: 相对路径 (如 "15_APTOS/train_images/c4a8f2fcf6e8.png")
+            relative_path: 相对路径 (如 "example_images/example_001.jpg")
 
         Returns:
             本地缓存路径
@@ -436,7 +436,7 @@ if __name__ == "__main__":
     # 测试下载单个文件
     print("\n=== 测试单个下载 ===")
     try:
-        local_path = fetcher.get_local_path("15_APTOS/train_images/c4a8f2fcf6e8.png")
+        local_path = fetcher.get_local_path("example_images/example_001.jpg")
         print(f"本地路径: {local_path}")
     except Exception as e:
         print(f"下载失败: {e}")
