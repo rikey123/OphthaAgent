@@ -8,11 +8,6 @@ run_script_path = os.path.join(base_path, 'run_vqa.py')
 
 # A list of dictionaries, where each dictionary represents a single VQA test run configuration.
 configurations = [
-    # {
-    #     "vqa_file": os.path.join(base_path, 'benchmark/filtered_AMD_RDMid/filtered_rfmid.json'),
-    #     "agent_file_path": os.path.join(base_path, 'fundus_decision2_v11_18_amd.py'),
-    #     "dataset_name": "AMD_RDMid"
-    # },
     {
         "vqa_file": os.path.join(base_path, 'benchmark/filtered_GlAUCOMA_ACRIMA/filtered_acrima.json'),
         "agent_file_path": os.path.join(base_path, 'fundus_decision2_parallel_v12_02.py'),
