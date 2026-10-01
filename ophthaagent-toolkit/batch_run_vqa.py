@@ -6,7 +6,7 @@ import os
 base_path = '<ANON_ABS_PATH>'
 run_script_path = os.path.join(base_path, 'run_vqa.py')
 
-# A list of dictionaries, where each dictionary represents a single VQA test run configuration.
+# A list of dictionaries, where each dictionary represents a single VQA test run configuration
 configurations = [
     {
         "vqa_file": os.path.join(base_path, 'benchmark/filtered_GlAUCOMA_ACRIMA/filtered_acrima.json'),
