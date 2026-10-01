@@ -12,17 +12,7 @@ configurations = [
         "vqa_file": os.path.join(base_path, 'benchmark/filtered_GlAUCOMA_ACRIMA/filtered_acrima.json'),
         "agent_file_path": os.path.join(base_path, 'fundus_decision2_parallel_v12_02.py'),
         "dataset_name": "GlAUCOMA_ACRIMA"
-    },
-    # {
-    #     "vqa_file": os.path.join(base_path, 'benchmark/filtered_DR_E-ophta/filtered_by_id_E-ophta.json'),
-    #     "agent_file_path": os.path.join(base_path, 'fundus_decision2_v11_18_dr.py'),
-    #     "dataset_name": "DR_E-ophta"
-    # },
-    # {
-    #     "vqa_file": os.path.join(base_path, 'benchmark/filtered_DR_grading/filtered_by_id_APTOS.json'),
-    #     "agent_file_path": os.path.join(base_path, 'fundus_decision2_v11_18_lession.py'),
-    #     "dataset_name": "DR_grading_APTOS"
-    # }
+    }
 ]
 
 # Iterate over each configuration and execute the VQA test script
