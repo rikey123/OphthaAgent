@@ -58,6 +58,7 @@ def main():
     )
 
     # 必需参数
+    # generator/example 文件夹下存放示例 VQA 数据
     parser.add_argument("--dataset", required=True, help="VQA数据集路径（JSON或JSONL格式）")
     parser.add_argument("--output", required=True, help="输出文件路径")
 
